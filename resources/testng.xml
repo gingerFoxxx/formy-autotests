@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Блок авторизации" parallel="tests" thread-count="1">
+    <test name="Авторизация пользователя">
+        <parameter name="Имя пользователя" value="root"/>
+        <parameter name="Пароль" value="toor"/>
+        <classes>
+            <class name=""/>
+            <class name=""/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
