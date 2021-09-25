@@ -1,5 +1,6 @@
 package pages;
 
+import pages.DatePickerPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -18,5 +19,10 @@ public class HomePage {
     public AutocompletePage clickAutocomplete(){
         clickLink("Autocomplete");
         return new AutocompletePage(driver);
+    }
+    // Go to DatePicker link
+    public DatePickerPage clickDatepicker(){
+        clickLink("Datepicker");
+        return new DatePickerPage(driver);
     }
 }

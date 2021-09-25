@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Блок авторизации" parallel="tests" thread-count="1">
-    <test name="Авторизация пользователя">
+    <test name="Authorization">
         <parameter name="Имя пользователя" value="root"/>
         <parameter name="Пароль" value="toor"/>
         <classes>
-            <class name=""/>
-            <class name=""/>
+            <class name="base.BaseTest"/>
+            <class name="autocomplete.AutocompleteTests"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Autocomplete">
+        <classes>
+            <class name="autocomplete.AutocompleteTests"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Date Picker">
+        <classes>
+            <class name="datepicker.DatePickerPageTests"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
