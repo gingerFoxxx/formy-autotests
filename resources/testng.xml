@@ -2,13 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Formy" parallel="tests" thread-count="1">
     <test name="Autocomplete">
-        <parameter name="Start" value="Go to site"/>
+        <parameter name="Info:" value="Form autocomplete validation"/>
         <classes>
             <class name="autocomplete.AutocompleteTests"/>
         </classes>
     </test> <!-- Test -->
     <test name="Date Picker">
-        <parameter name="Start" value="Go to site"/>
+        <parameter name="Info:" value="Date Picker validation"/>
         <classes>
             <class name="datepicker.DatePickerTests"/>
         </classes>

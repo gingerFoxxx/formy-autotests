@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 public class AutocompletePage {
     private WebDriver driver;
     private By addressField = By.id("autocomplete");
-    private By streetAddressField = By.id("street_number");
     private By streetAddress2Field = By.id("route");
     private By cityField = By.id("locality");
     private By stateField = By.id("administrative_area_level_1");

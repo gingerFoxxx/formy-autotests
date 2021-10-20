@@ -1,12 +1,7 @@
 package autocomplete;
 
 import base.BaseTest;
-import com.google.common.base.Verify;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-
-import java.awt.*;
 
 import static org.testng.Assert.assertEquals;
 
