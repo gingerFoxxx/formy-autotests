@@ -32,7 +32,7 @@ public class DatePickerTests extends BaseTest {
     @Test
     public void futureDate(){
         datePickerPage = homePage.clickDatepicker();
-        var dateToSelect = LocalDate.now().plusMonths(2);
+        var dateToSelect = LocalDate.now().plusDays(5);
         var selectedDate = datePickerPage.chooseDate(dateToSelect);
         assertEquals(dateToSelect, selectedDate);
     }

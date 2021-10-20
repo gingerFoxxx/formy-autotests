@@ -6,6 +6,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -26,7 +27,7 @@ public class BaseTest {
     @BeforeMethod
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(getChromeOptions()); // The browser is not launching
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://formy-project.herokuapp.com/");
@@ -51,5 +52,11 @@ public class BaseTest {
                 e.printStackTrace();
             }
         }
+    }
+
+    private ChromeOptions getChromeOptions(){
+        ChromeOptions options = new ChromeOptions();
+        options.setHeadless(true);
+        return options;
     }
 }
