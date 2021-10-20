@@ -39,7 +39,7 @@ public class BaseTest {
     }
 
     @AfterMethod
-    @Description("Сделать скриншот если тест упал")
+    //Making screenshots for failing tests
     public void recordFailure(ITestResult result){
         if(ITestResult.FAILURE == result.getStatus()){
             var camera = (TakesScreenshot)driver;
