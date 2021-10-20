@@ -32,9 +32,6 @@ public class AutocompletePage {
     public String getAddressFieldText(){
         return driver.findElement(addressField).getAttribute("value");
     }
-    public String getStreetAddressFieldText(){
-        return driver.findElement(streetAddressField).getAttribute("value");
-    }
     public String getStreetAddress2FieldText(){
         return driver.findElement(streetAddress2Field).getAttribute("value");
     }

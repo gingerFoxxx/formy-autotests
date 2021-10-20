@@ -9,7 +9,7 @@ import java.time.Month;
 
 import static org.testng.Assert.assertEquals;
 
-public class DatePickerPageTests extends BaseTest {
+public class DatePickerTests extends BaseTest {
     private DatePickerPage datePickerPage;
 
 

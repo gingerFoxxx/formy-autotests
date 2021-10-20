@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Formy" parallel="tests" thread-count="1">
-    <test name="Authorization">
-        <parameter name="Start" value="Go to site"/>
-        <classes>
-            <class name="base.BaseTest"/>
-        </classes>
-    </test> <!-- Test -->
+<suite name="Formy" parallel="tests" thread-count="2">
     <test name="Autocomplete">
+        <parameter name="Start" value="Go to site"/>
         <classes>
             <class name="autocomplete.AutocompleteTests"/>
         </classes>
     </test> <!-- Test -->
     <test name="Date Picker">
+        <parameter name="Start" value="Go to site"/>
         <classes>
-            <class name="datepicker.DatePickerPageTests"/>
+            <class name="datepicker.DatePickerTests"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

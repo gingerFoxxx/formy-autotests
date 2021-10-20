@@ -1,12 +1,9 @@
 package pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.temporal.ChronoUnit;
-
 import static java.lang.String.format;
 
 public class DatePickerPage {
