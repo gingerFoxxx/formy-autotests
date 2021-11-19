@@ -19,7 +19,7 @@ public class AutocompletePage {
         this.driver = driver;
     }
 
-    public void fillAddressField(String addressText) throws InterruptedException {
+    public void setAddressField(String addressText) throws InterruptedException {
         WebElement address = driver.findElement(addressField);
         address.sendKeys(addressText);
         Thread.sleep(2000);

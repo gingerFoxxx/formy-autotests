@@ -9,7 +9,7 @@ public class AutocompleteTests extends BaseTest {
     @Test
     public void testAddressOptions() throws InterruptedException {
         var autocompletePage = homePage.clickAutocomplete();
-        autocompletePage.fillAddressField("10 Cornerstone Squ");
+        autocompletePage.setAddressField("10 Cornerstone Squ");
 
         assertEquals(autocompletePage.getAddressFieldText(),"10 Cornerstone Square, Westford, MA, USA","Incorrect text!");
         assertEquals(autocompletePage.getStreetAddress2FieldText(),"Cornerstone Square","Incorrect text!");
