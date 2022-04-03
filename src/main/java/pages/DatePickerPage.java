@@ -48,7 +48,7 @@ public class DatePickerPage {
         }
     }
 
-    // CHOOSE DAY OF MONTH ON THE CALENDAR
+    //CHOOSE DAY OF MONTH ON THE CALENDAR
     public void chooseDay(int dayOfMonth) {
         By locator = By.xpath(format(day_FORMAT, dayOfMonth));
         driver.findElement(locator).click();

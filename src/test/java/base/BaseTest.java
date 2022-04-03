@@ -27,7 +27,7 @@ public class BaseTest {
     @BeforeMethod
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
-        driver = new ChromeDriver(getChromeOptions()); // The browser is not launching
+        driver = new ChromeDriver(); // The browser is not launching (getChromeOptions())
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://formy-project.herokuapp.com/");
@@ -54,9 +54,9 @@ public class BaseTest {
         }
     }
 
-    private ChromeOptions getChromeOptions(){
+    /*private ChromeOptions getChromeOptions(){
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);
         return options;
-    }
+    }*/
 }

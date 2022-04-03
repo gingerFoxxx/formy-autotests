@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class SubmitPage {
     private WebDriver driver;
 
-    private By alert = By.cssSelector("div.alert.alert-success");
+    private By alert = By.xpath("//div[@class='alert alert-success']");
 
 
     public SubmitPage(WebDriver driver) {
