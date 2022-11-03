@@ -7,24 +7,15 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CompleteWebFormPage {
     private WebDriver driver;
-    //---TEXT FIELDS:
     private By firstNameField = By.id("first-name");
     private By lastNameField = By.id("last-name");
     private By jobTitleField = By.id("job-title");
-    //---
-
-    //---RADIO BUTTONS (Highest level of education):
     private By highSchoolRadioBtn = By.id("radio-button-1");
     private By collegeRadioBth = By.id("radio-button-2");
     private By gradSchoolRadioBth = By.id("radio-button-1");
-    //---
-
-    //---CHECKBOXES (Sex):
     private By maleCheckbox = By.id("checkbox-1");
     private By femaleCheckbox = By.id("checkbox-2");
     private By notToSayCheckbox = By.id("checkbox-3");
-    //---
-
     private By yearsDropdown = By.id("select-menu");
     private By dateField = By.id("datepicker");
     private By submitBtn = By.cssSelector("a.btn.btn-lg.btn-primary");
@@ -33,12 +24,28 @@ public class CompleteWebFormPage {
         this.driver = driver;
     }
 
+    //---TEXT FIELDS METHODS:
     public void setTextFields(String firstName, String lastName, String jobTitle, String date){
         driver.findElement(firstNameField).sendKeys(firstName);
         driver.findElement(lastNameField).sendKeys(lastName);
         driver.findElement(jobTitleField).sendKeys(jobTitle);
         driver.findElement(dateField).sendKeys(date + Keys.ENTER);
     }
+
+    public String getFirstNameField(){
+        return driver.findElement(firstNameField).getAttribute("value");
+    }
+    public String getLastNameField(){
+        return driver.findElement(lastNameField).getAttribute("value");
+    }
+    public String getJobTitleField(){
+        return driver.findElement(jobTitleField).getAttribute("value");
+    }
+    public String getDateField(){
+        return driver.findElement(dateField).getAttribute("value");
+    }
+    //---
+
     //---RADIO BUTTON METHODS:
     public boolean isRadioBtn1Selected(){
         return driver.findElement(highSchoolRadioBtn).isSelected();
@@ -64,6 +71,16 @@ public class CompleteWebFormPage {
             driver.findElement(gradSchoolRadioBth).click();
         }
     }
+
+    public boolean isRB1Checked(){
+        return driver.findElement(highSchoolRadioBtn).isSelected();
+    }
+    public boolean isRB2Checked(){
+        return driver.findElement(collegeRadioBth).isSelected();
+    }
+    public boolean isRB3Checked(){
+        return driver.findElement(gradSchoolRadioBth).isSelected();
+    }
     //---
 
     //---CHECKBOX METHODS:
@@ -75,7 +92,6 @@ public class CompleteWebFormPage {
             driver.findElement(maleCheckbox).click();
         }
     }
-
     public boolean isCheckbox2Selected(){
         return driver.findElement(femaleCheckbox).isSelected();
     }
@@ -84,7 +100,6 @@ public class CompleteWebFormPage {
             driver.findElement(femaleCheckbox).click();
         }
     }
-
     public boolean isCheckbox3Selected(){
         return driver.findElement(notToSayCheckbox).isSelected();
     }
@@ -93,28 +108,7 @@ public class CompleteWebFormPage {
             driver.findElement(notToSayCheckbox).click();
         }
     }
-    //---
 
-    public void setDropdown(String option){
-        Select dropdownElement = new Select(driver.findElement(yearsDropdown));
-        dropdownElement.selectByVisibleText(option);
-    }
-
-    public SubmitPage clickSubmitBtn(){
-        driver.findElement(submitBtn).click();
-        return new SubmitPage(driver);
-    }
-
-    //ASSERTIONS:
-    public boolean isRB1Checked(){
-        return driver.findElement(highSchoolRadioBtn).isSelected();
-    }
-    public boolean isRB2Checked(){
-        return driver.findElement(collegeRadioBth).isSelected();
-    }
-    public boolean isRB3Checked(){
-        return driver.findElement(gradSchoolRadioBth).isSelected();
-    }
     public boolean isCB1Enabled(){
         return driver.findElement(maleCheckbox).isEnabled();
     }
@@ -124,5 +118,25 @@ public class CompleteWebFormPage {
     public boolean isCB3Enabled(){
         return driver.findElement(notToSayCheckbox).isEnabled();
     }
+    //---
+
+    //--- DROPDOWN METHOD
+    public void setDropdown(String option){
+        Select dropdownElement = new Select(driver.findElement(yearsDropdown));
+        dropdownElement.selectByVisibleText(option);
+    }
+
+    public String getDropdown(){
+        return driver.findElement(yearsDropdown).getAttribute("value");
+    }
+    //---
+
+    public SubmitPage clickSubmitBtn(){
+        driver.findElement(submitBtn).click();
+        return new SubmitPage(driver);
+    }
+
+
+
 
 }

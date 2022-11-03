@@ -9,6 +9,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.CompleteWebFormPage;
 import pages.SubmitPage;
+
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class CompleteWebFormTests extends BaseTest {
@@ -30,7 +32,11 @@ public class CompleteWebFormTests extends BaseTest {
         completeWebFormPage.setCheckbox2();
         completeWebFormPage.setCheckbox3();
         completeWebFormPage.setDropdown("0-1");
-        completeWebFormPage.clickSubmitBtn();
+
+        assertEquals(completeWebFormPage.getFirstNameField(), firstName,"Incorrect text!");
+        assertEquals(completeWebFormPage.getLastNameField(), lastName,"Incorrect text!");
+        assertEquals(completeWebFormPage.getJobTitleField(), jobTitle,"Incorrect text!");
+        assertEquals(completeWebFormPage.getDateField(), date,"Incorrect text!");
 
         assertTrue(completeWebFormPage.isRB1Checked());
         assertTrue(completeWebFormPage.isRB2Checked());
@@ -39,6 +45,11 @@ public class CompleteWebFormTests extends BaseTest {
         assertTrue(completeWebFormPage.isCB1Enabled());
         assertTrue(completeWebFormPage.isCB2Enabled());
         assertTrue(completeWebFormPage.isCB3Enabled());
+
+        assertEquals(completeWebFormPage.getDropdown(), "1", "Incorrect text!" );
+
+        completeWebFormPage.clickSubmitBtn();
+
 
         //SubmitPage submitPage = completeWebFormPage.clickSubmitBtn();
         //Assert.assertEquals(submitPage.getTextAlert(),"The form was successfully submitted!","Incorrect");

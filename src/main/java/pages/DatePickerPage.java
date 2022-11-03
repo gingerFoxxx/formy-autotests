@@ -24,7 +24,7 @@ public class DatePickerPage {
             driver.findElement(openCalendar).click();
     }
 
-    //Get the current period (March 2021). Split it on 'March' and '2021'. And return LocalDate as (year:2021, month:MARCH, day:1)
+    //GET THE CURRENT PERIOD (MARCH 2021). Split it on 'March' and '2021'. And return LocalDate as (year:2021, month:MARCH, day:1)
     public LocalDate getCurrentPeriod(){
         var currentPeriod = driver.findElement(period).getText().split(" ");
         return LocalDate.of(
@@ -62,7 +62,7 @@ public class DatePickerPage {
         return getSelectedDate();
     }
 
-    // RETURN SELECTED DATE BACK TO THE TEST (YEAR, MONTH, DAY)
+    //RETURN SELECTED DATE BACK TO THE TEST (YEAR, MONTH, DAY)
     public LocalDate getSelectedDate(){
         var fields = driver.findElement(openCalendar).getAttribute("value").split("/");
         return LocalDate.of(
