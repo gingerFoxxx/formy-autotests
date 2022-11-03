@@ -50,9 +50,8 @@ public class CompleteWebFormTests extends BaseTest {
 
         completeWebFormPage.clickSubmitBtn();
 
-
-        //SubmitPage submitPage = completeWebFormPage.clickSubmitBtn();
-        //Assert.assertEquals(submitPage.getTextAlert(),"The form was successfully submitted!","Incorrect");
+        SubmitPage submitPage = completeWebFormPage.clickSubmitBtn();
+        Assert.assertEquals(submitPage.getTextAlert(),"The form was successfully submitted!","Incorrect");
     }
 
 }

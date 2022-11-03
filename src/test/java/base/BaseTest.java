@@ -54,9 +54,9 @@ public class BaseTest {
         }
     }
 
-    /*private ChromeOptions getChromeOptions(){
+   /*private ChromeOptions getChromeOptions(){
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);
         return options;
-    }*/
+    } */
 }
