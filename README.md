@@ -5,9 +5,6 @@ The project represents how to interact with:
 1. ✅ Autocomplete form - done!
 2. ✅ Date picker form - done!
 3. ✅ Complete Web Form with DataProvider - done!
-4. 🕒 Drag and Drop form
-5. Modal form
-6. Page scroll 
 
 And:
 1. ✅ Run tests without opening a browser - done!
