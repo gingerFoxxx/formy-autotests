@@ -1,6 +1,8 @@
 # formy-autotests
-Project of UI Web autotests using Page Object Model.
-Tech stack: Java, Selenium, TestNG. Website: https://formy-project.herokuapp.com/ .
+Project of Web UI autotests using Page Object Model. Framework from scratch. 
+
+Tech stack: Java, Selenium, TestNG. 
+Website: https://formy-project.herokuapp.com/ 
 
 The project represents how to interact with:
 1. ✅ Autocomplete form - done!
